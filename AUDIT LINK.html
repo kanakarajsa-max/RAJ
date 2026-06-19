@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Dashboard</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* 1. Container Load Animation */
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            animation: fadeInUp 0.6s ease-out both;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        /* Base Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 15px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 8px;
+            text-transform: uppercase;
+            box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+            
+            /* Smooth transitions for hover states */
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
+                        background-color 0.25s ease, 
+                        box-shadow 0.25s ease;
+            
+            /* 2. Entrance animation configuration for buttons */
+            animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+        }
+
+        /* 3. Hover and Active Micro-interactions */
+        .btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(-1px) scale(0.99);
+            box-shadow: 0 3px 8px rgba(0, 123, 255, 0.3);
+        }
+
+        /* --- Keyframe Animations --- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes popIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* 4. Staggered Animation Delays for each button */
+        .btn:nth-child(1)  { animation-delay: 0.1s; }
+        .btn:nth-child(2)  { animation-delay: 0.15s; }
+        .btn:nth-child(3)  { animation-delay: 0.2s; }
+        .btn:nth-child(4)  { animation-delay: 0.25s; }
+        .btn:nth-child(5)  { animation-delay: 0.3s; }
+        .btn:nth-child(6)  { animation-delay: 0.35s; }
+        .btn:nth-child(7)  { animation-delay: 0.4s; }
+        .btn:nth-child(8)  { animation-delay: 0.45s; }
+        .btn:nth-child(9)  { animation-delay: 0.5s; }
+        .btn:nth-child(10) { animation-delay: 0.55s; }
+        .btn:nth-child(11) { animation-delay: 0.6s; }
+        .btn:nth-child(12) { animation-delay: 0.65s; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>OFFICE LINKS</h1>
+        
+        <div class="grid">
+            <a href="https://www.incometaxindia.gov.in/" target="_blank" class="btn">IT DETAILS</a>
+            <a href="https://www.gst.gov.in/" target="_blank" class="btn">GST WEBSITE</a>
+            <a href="https://www.incometax.gov.in/iec/foportal/" target="_blank" class="btn">INCOME TAX FILLING</a>
+            <a href="http://144.217.180.138:8080/secure/Dashboard.jspa" target="_blank" class="btn">JEERA</a>
+            <a href="https://www.taxlok.com/online-easy-tax-new/login.html/id=1" target="_blank" class="btn">TAX LOK</a>
+            <a href="https://cibnext.icici.bank.in/corp/AuthenticationController" target="_blank" class="btn">ICICI BANK</a>
+            <a href="https://accounts.saral.pro/login" target="_blank" class="btn">SARAL LOGIN</a>
+            <a href="https://omni.axis.bank.in/axisretailbanking/" target="_blank" class="btn">AXIS BANK</a>
+            <a href="https://taxationupdates.com/CA-Prompt-Library.html" target="_blank" class="btn">TDS</a>
+            <a href="https://report.insight.gov.in/reporting-webapp/portal/homePage" target="_blank" class="btn">IT REPORTING</a>
+            <a href="https://www.cagateway.com/" target="_blank" class="btn">GST RECKONER</a>
+            <a href="https://traces.tdscpc.gov.in/" target="_blank" class="btn">TRACES</a>
+        </div>
+    </div>
+
+</body>
+</html>
